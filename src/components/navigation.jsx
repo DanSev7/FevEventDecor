@@ -1,9 +1,32 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { motion } from "framer-motion";
 import { Menu, X } from "lucide-react";
+import { FiSun, FiMoon } from "react-icons/fi";
 
 export default function Navigation() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [darkMode, setDarkMode] = useState(() => {
+    if (typeof window !== "undefined") {
+      return (
+        localStorage.getItem("theme") === "dark" ||
+        (window.matchMedia("(prefers-color-scheme: dark)").matches &&
+          !localStorage.getItem("theme"))
+      );
+    }
+    return false;
+  });
+
+  useEffect(() => {
+    if (darkMode) {
+      document.body.classList.add("dark");
+      localStorage.setItem("theme", "dark");
+    } else {
+      document.body.classList.remove("dark");
+      localStorage.setItem("theme", "light");
+    }
+  }, [darkMode]);
+
+  const toggleDarkMode = () => setDarkMode((prev) => !prev);
 
   const scrollToSection = (sectionId) => {
     const element = document.getElementById(sectionId);
@@ -14,14 +37,14 @@ export default function Navigation() {
   };
 
   return (
-    <nav className="fixed top-0 left-0 right-0 z-50 bg-white/95 backdrop-blur-md shadow-lg">
+    <nav className="fixed top-0 left-0 right-0 z-50 bg-white/95 dark:bg-gray-900/95 backdrop-blur-md shadow-lg">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16">
           {/* Logo */}
           <div className="flex items-center">
-            <div className="text-2xl font-serif font-bold text-amber-900">
+            <div className="text-2xl font-serif font-bold text-yellow-700 dark:text-yellow-400">
               Fev
-              <span className="text-sm font-sans font-normal text-amber-700 block -mt-1">
+              <span className="text-sm font-sans font-normal text-yellow-600 dark:text-yellow-300 block -mt-1">
                 EVENT DECOR
               </span>
             </div>
@@ -33,28 +56,52 @@ export default function Navigation() {
               <button
                 key={item}
                 onClick={() => scrollToSection(item)}
-                className="text-amber-900 hover:text-amber-700 transition duration-200 font-medium capitalize"
+                className="cursor-pointer text-yellow-800 dark:text-yellow-200 hover:text-yellow-600 dark:hover:text-yellow-400 transition duration-200 font-medium capitalize"
               >
                 {item}
               </button>
             ))}
+
+            {/* Dark mode toggle button (desktop) */}
+            <button
+              onClick={toggleDarkMode}
+              className="ml-2 p-2 rounded-full hover:bg-yellow-100 dark:hover:bg-gray-800 transition duration-200 cursor-pointer"
+              aria-label="Toggle dark mode"
+            >
+              {darkMode ? (
+                <FiSun className="text-yellow-600 w-5 h-5" />
+              ) : (
+                <FiMoon className="text-yellow-600 w-5 h-5" />
+              )}
+            </button>
           </div>
 
           {/* CTA Button */}
           <div className="hidden md:block">
             <button
               onClick={() => scrollToSection("contact")}
-              className="bg-amber-700 hover:bg-amber-800 text-white px-6 py-2 rounded-full font-medium transition duration-200"
+              className="cursor-pointer bg-gradient-to-r from-yellow-400 via-yellow-600 to-yellow-700 hover:from-yellow-600 hover:to-yellow-500 text-white px-6 py-2 rounded-full font-medium transition duration-300 shadow-md"
             >
               Book Now
             </button>
           </div>
 
-          {/* Mobile Menu Button */}
-          <div className="md:hidden">
+          {/* Mobile: Dark mode toggle BEFORE menu icon */}
+          <div className="flex md:hidden items-center gap-3">
+            <button
+              onClick={toggleDarkMode}
+              className="p-2 rounded-full hover:bg-yellow-100 dark:hover:bg-gray-800 transition duration-200 cursor-pointer"
+              aria-label="Toggle dark mode"
+            >
+              {darkMode ? (
+                <FiSun className="text-yellow-600 w-5 h-5" />
+              ) : (
+                <FiMoon className="text-yellow-600 w-5 h-5" />
+              )}
+            </button>
             <button
               onClick={() => setIsMenuOpen(!isMenuOpen)}
-              className="text-amber-900 hover:text-amber-700 focus:outline-none"
+              className="text-yellow-800 dark:text-yellow-200 hover:text-yellow-600 dark:hover:text-yellow-400 focus:outline-none cursor-pointer"
             >
               {isMenuOpen ? <X size={24} /> : <Menu size={24} />}
             </button>
@@ -68,21 +115,21 @@ export default function Navigation() {
           initial={{ opacity: 0, y: -10 }}
           animate={{ opacity: 1, y: 0 }}
           exit={{ opacity: 0, y: -10 }}
-          className="md:hidden bg-white border-t"
+          className="md:hidden bg-white dark:bg-gray-900 border-t dark:border-gray-800"
         >
           <div className="px-4 pt-2 pb-4 space-y-2">
             {["home", "about", "services", "portfolio", "contact"].map((item) => (
               <button
                 key={item}
                 onClick={() => scrollToSection(item)}
-                className="block w-full text-left px-3 py-2 text-amber-900 hover:text-amber-700 transition duration-200"
+                className="cursor-pointer block w-full text-left px-3 py-2 text-yellow-800 dark:text-yellow-200 hover:text-yellow-600 dark:hover:text-yellow-400 transition duration-200"
               >
                 {item.charAt(0).toUpperCase() + item.slice(1)}
               </button>
             ))}
             <button
               onClick={() => scrollToSection("contact")}
-              className="block mt-4 w-full bg-amber-700 hover:bg-amber-800 text-white px-4 py-2 rounded-full font-medium transition duration-200"
+              className="cursor-pointer block mt-4 w-full bg-gradient-to-r from-yellow-400 via-yellow-600 to-yellow-700 hover:from-yellow-600 hover:to-yellow-500 text-white px-4 py-2 rounded-full font-medium transition duration-300 shadow-md"
             >
               Book Now
             </button>

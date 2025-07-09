@@ -1,1 +1,14 @@
 @import "tailwindcss";
+
+/* Global light mode styles */
+body {
+  @apply bg-white text-amber-900;
+}
+
+/* Global dark mode styles */
+.dark body {
+  @apply bg-gray-900 text-amber-100;
+}
+
+@custom-variant dark (&:where(.dark, .dark *));
+
