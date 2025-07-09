@@ -39,7 +39,7 @@ const services = [
 
 export default function Services() {
   return (
-    <section id="services" className="py-16 lg:py-24 bg-white dark:bg-gray-900">
+    <section id="services" className="py-16 lg:py-24 bg-white dark:bg-[#181a1b]">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section Header */}
         <motion.div
@@ -49,7 +49,7 @@ export default function Services() {
           viewport={{ once: true }}
           className="text-center mb-16"
         >
-          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-yellow-800 dark:text-yellow-300 mb-4 font-serif">
+          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-yellow-800 dark:text-gray-300 mb-4 font-serif">
             Our Services
           </h2>
           <p className="text-lg text-gray-700 dark:text-yellow-100 max-w-2xl mx-auto">

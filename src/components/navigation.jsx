@@ -37,7 +37,7 @@ export default function Navigation() {
   };
 
   return (
-    <nav className="fixed top-0 left-0 right-0 z-50 bg-white/95 dark:bg-gray-900/95 backdrop-blur-md shadow-lg">
+    <nav className="fixed top-0 left-0 right-0 z-50 bg-white/95 dark:bg-[#181a1b] backdrop-blur-md shadow-lg">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16">
           {/* Logo */}
@@ -80,7 +80,7 @@ export default function Navigation() {
           <div className="hidden md:block">
             <button
               onClick={() => scrollToSection("contact")}
-              className="cursor-pointer bg-gradient-to-r from-yellow-400 via-yellow-600 to-yellow-700 hover:from-yellow-600 hover:to-yellow-500 text-white px-6 py-2 rounded-full font-medium transition duration-300 shadow-md"
+              className="cursor-pointer bg-gradient-to-r from-yellow-500 to-yellow-700 hover:from-yellow-700 hover:to-yellow-500 text-white px-6 py-2 rounded-full font-medium transition duration-300 shadow-md"
             >
               Book Now
             </button>

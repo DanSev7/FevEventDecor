@@ -14,8 +14,10 @@ export default {
               600: '#d97706',
               700: '#b45309',
             },
+            champagne: "#f6ead0",
+            darkbrown: "#35280a",
+          },
       },
     },
     plugins: [],
   }
-}

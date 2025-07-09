@@ -3,7 +3,7 @@ import { motion } from "framer-motion";
 
 export default function About() {
   return (
-    <section id="about" className="py-16 lg:py-24 bg-yellow-50 dark:bg-yellow-950">
+    <section id="about" className="py-16 lg:py-24 bg-[#f6ead0] dark:bg-[#47360e]">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid lg:grid-cols-2 gap-12 items-center">
           {/* Text Content */}
@@ -13,7 +13,7 @@ export default function About() {
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
           >
-            <h2 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-yellow-800 dark:text-yellow-300 mb-6 font-serif">
+            <h2 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-amber-900 dark:text-gray-200 mb-6 font-serif">
               Our Story
             </h2>
             <p className="text-lg text-yellow-900 dark:text-yellow-100 mb-6 leading-relaxed">
@@ -52,7 +52,7 @@ export default function About() {
             <div className="absolute -bottom-6 -right-6 bg-gradient-to-r from-yellow-400 via-yellow-600 to-yellow-700 p-6 rounded-2xl shadow-xl">
               <div className="text-center">
                 <div className="text-3xl font-bold text-white font-serif">
-                  10+
+                  2+
                 </div>
                 <div className="text-sm text-white font-medium">
                   Years Experience
