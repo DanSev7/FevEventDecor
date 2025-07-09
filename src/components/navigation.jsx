@@ -136,6 +136,7 @@ export default function Navigation() {
               className="cursor-pointer block mt-4 w-full bg-gradient-to-r from-yellow-400 via-yellow-600 to-yellow-700 hover:from-yellow-600 hover:to-yellow-500 text-white px-4 py-2 rounded-full font-medium transition duration-300 shadow-md"
               role="menuitem"
               aria-label="Book Now"
+              style={{ width: 'calc(100% - 24px)' }}
             >
               Book Now
             </button>

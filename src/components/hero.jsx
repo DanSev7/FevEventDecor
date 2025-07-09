@@ -12,7 +12,7 @@ export default function Hero() {
   return (
     <section
       id="home"
-      className="relative h-screen flex items-center justify-center px-12"
+      className="relative h-screen flex items-center justify-center"
     >
       {/* Background Image */}
       <div
