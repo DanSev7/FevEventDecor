@@ -1,19 +1,20 @@
-import React from 'react';
+import React from "react";
 import { motion } from "framer-motion";
 
 export default function About() {
   return (
+    // <section id="about" className="py-16 lg:py-24 bg-champagne">
     <section id="about" className="py-16 lg:py-24 bg-[#f6ead0] dark:bg-[#47360e] px-4">
-      <div className="container mx-auto px-4 max-w-7xl">
-        <div className="max-w-4xl grid lg:grid-cols-2 gap-12 items-center">
-          {/* Text Content */}
+
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="grid lg:grid-cols-2 gap-12 items-center">
           <motion.div
             initial={{ opacity: 0, x: -50 }}
             whileInView={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
           >
-            <h2 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-amber-900 dark:text-gray-200 mb-6 font-serif">
+            <h2 className="font-playfair text-3xl sm:text-4xl lg:text-5xl font-bold text-[#392013] dark:text-gray-100 mb-6">
               Our Story
             </h2>
             <p className="text-lg text-yellow-900 dark:text-yellow-100 mb-6 leading-relaxed">
@@ -35,7 +36,6 @@ export default function About() {
             </p>
           </motion.div>
 
-          {/* Image Content */}
           <motion.div
             initial={{ opacity: 0, x: 50 }}
             whileInView={{ opacity: 1, x: 0 }}
@@ -44,10 +44,9 @@ export default function About() {
             className="relative"
           >
             <img
-              src="https://images.unsplash.com/photo-1519167758481-83f550bb49b3?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&h=600"
+              src="https://images.unsplash.com/photo-1519167758481-83f550bb49b3?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=800&h=600"
               alt="Elegant wedding reception with floral arrangements"
               className="rounded-2xl shadow-2xl w-full h-auto"
-              loading="lazy"
             />
             <div className="absolute -bottom-5 -right-4 bg-gradient-to-r from-yellow-400 via-yellow-600 to-yellow-700 p-4 rounded-2xl shadow-xl">
               <div className="text-center">

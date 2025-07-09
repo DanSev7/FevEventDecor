@@ -54,7 +54,7 @@ export default function Portfolio() {
           viewport={{ once: true }}
           className="text-center mb-16"
         >
-          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-yellow-800 dark:text-gray-200 font-serif mb-4">
+          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-[#392013] dark:text-gray-200 font-serif mb-4">
             Our Portfolio
           </h2>
           <p className="text-lg text-gray-700 dark:text-yellow-100 max-w-2xl mx-auto">

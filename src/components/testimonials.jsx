@@ -35,7 +35,7 @@ export default function Testimonials() {
           viewport={{ once: true }}
           className="text-center mb-16"
         >
-          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-yellow-800 dark:text-gray-200 font-serif mb-4">
+          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-[#392013] dark:text-gray-200 font-serif mb-4">
             What Our Clients Say
           </h2>
           <p className="text-lg text-yellow-900 dark:text-yellow-100 max-w-2xl mx-auto">
@@ -52,7 +52,7 @@ export default function Testimonials() {
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: index * 0.1 }}
               viewport={{ once: true }}
-              className="rounded-2xl p-8 bg-white dark:bg-yellow-800 shadow-md"
+              className="rounded-2xl p-8 bg-white dark:bg-[#2e2e2e] shadow-md"
             >
               <div className="flex items-center mb-4 text-yellow-500">
                 {[...Array(5)].map((_, i) => (

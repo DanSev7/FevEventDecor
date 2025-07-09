@@ -12,4 +12,8 @@ body {
 
 @custom-variant dark (&:where(.dark, .dark *));
 
- 
+
+
+.hero-gradient {
+  background: linear-gradient(135deg, rgba(62, 39, 35, 0.7), rgba(139, 111, 71, 0.8));
+}

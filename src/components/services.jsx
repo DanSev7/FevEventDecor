@@ -49,7 +49,7 @@ export default function Services() {
           viewport={{ once: true }}
           className="text-center mb-16"
         >
-          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-yellow-800 dark:text-gray-300 mb-4 font-serif">
+          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-[#392013] dark:text-gray-200 mb-4 font-serif">
             Our Services
           </h2>
           <p className="text-lg text-gray-700 dark:text-yellow-100 max-w-2xl mx-auto">
@@ -66,7 +66,7 @@ export default function Services() {
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: index * 0.1 }}
               viewport={{ once: true }}
-              className={`${service.bg} dark:bg-yellow-800 rounded-2xl p-8 text-center shadow hover:shadow-xl transition duration-300`}
+              className={`${service.bg} dark:bg-[#2e2e2e] rounded-2xl p-8 text-center shadow-md hover:shadow-xl dark:shadow-none dark:hover:shadow-yellow-700/30 transition duration-300`}
             >
               <div
                 className={`w-16 h-16 ${service.iconBg} rounded-full flex items-center justify-center mx-auto mb-6`}

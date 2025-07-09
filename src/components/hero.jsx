@@ -12,11 +12,11 @@ export default function Hero() {
   return (
     <section
       id="home"
-      className="relative h-screen flex items-center justify-center"
+      className="relative h-screen flex items-center justify-center hero-gradient"
     >
       {/* Background Image */}
       <div
-        className="absolute inset-0 bg-cover bg-center px-4 sm:px-6 lg:px-8"
+        className="absolute inset-0 bg-cover bg-gradient-to-b bg-[#8b6f47cc] to bg-[#8b6f47cc] from bg-[#8b6f47cc] bg-center px-4 sm:px-6 lg:px-8"
         style={{
           backgroundImage:
             "url('https://images.unsplash.com/photo-1519225421980-715cb0215aed?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&h=1080')",
@@ -24,8 +24,8 @@ export default function Hero() {
       />
 
       {/* Darker Yellow Shaded Overlay */}
-      <div className="absolute inset-0 bg-yellow-900/60 mix-blend-multiply" />
-
+      {/* <div className="absolute inset-0 bg-yellow-900/80 mix-blend-multiply" /> */}
+      <div className="absolute inset-0 hero-gradient" />
       {/* Content */}
       <div className="relative z-10 text-center px-4 sm:px-6 lg:px-8 max-w-4xl mx-auto p-4">
         <motion.h1

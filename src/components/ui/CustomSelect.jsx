@@ -35,10 +35,10 @@ export default function CustomSelect({ label, name, value, onChange, options = [
         className="w-full flex justify-between items-center border border-gray-300 rounded-md px-4 py-2 bg-white dark:bg-[#181a1b] focus:outline-none focus:ring-2 focus:ring-yellow-500 focus:border-yellow-500 transition duration-200 shadow-sm"
         onClick={() => setOpen(o => !o)}
       >
-        <span className={selected ? "text-gray-900" : "text-gray-400"}>
+        <span className={selected ? "text-gray-400" : "text-warm-brown dark:text-gray-400"}>
           {selected ? selected.label : "Select event type"}
         </span>
-        <FaChevronDown className={`ml-2 text-yellow-700 transition-transform ${open ? 'rotate-180' : ''}`} />
+        <FaChevronDown className={`ml-2 text-gray-300 transition-transform ${open ? 'rotate-180' : ''}`} />
       </button>
       {open && (
         <ul
@@ -52,7 +52,7 @@ export default function CustomSelect({ label, name, value, onChange, options = [
               key={option.value}
               role="option"
               aria-selected={value === option.value}
-              className={`px-4 py-2 cursor-pointer hover:bg-yellow-100 ${value === option.value ? 'bg-yellow-200 font-semibold' : ''}`}
+              className={`px-4 py-2 cursor-pointer text-gray-400 hover:bg-yellow-100 ${value === option.value ? 'bg-gray-200 font-semibold' : ''}`}
               onClick={() => {
                 onChange({ target: { name, value: option.value } });
                 setOpen(false);

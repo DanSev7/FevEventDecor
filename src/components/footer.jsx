@@ -1,4 +1,5 @@
 import React from "react";
+import { FaPhone, FaEnvelope, FaMapMarkerAlt, FaInstagram, FaFacebook, FaPinterest, FaTwitter } from "react-icons/fa";
 export default function Footer() {
     const scrollToSection = (sectionId) => {
       const element = document.getElementById(sectionId);
@@ -24,16 +25,16 @@ export default function Footer() {
               </p>
               <div className="flex space-x-4">
                 <a href="#" className="text-[#f6ead0] hover:text-yellow-500 transition-colors">
-                  <i className="fab fa-instagram text-xl"></i>
+                  <FaInstagram className="text-xl" />
                 </a>
                 <a href="#" className="text-[#f6ead0] hover:text-yellow-500 transition-colors">
-                  <i className="fab fa-facebook text-xl"></i>
+                  <FaFacebook className="text-xl" />
                 </a>
                 <a href="#" className="text-[#f6ead0] hover:text-yellow-500 transition-colors">
-                  <i className="fab fa-pinterest text-xl"></i>
+                  <FaPinterest className="text-xl" />
                 </a>
                 <a href="#" className="text-[#f6ead0] hover:text-yellow-500 transition-colors">
-                  <i className="fab fa-twitter text-xl"></i>
+                  <FaTwitter className="text-xl" />
                 </a>
               </div>
             </div>
@@ -60,27 +61,27 @@ export default function Footer() {
                 ))}
               </ul>
             </div>
-  
+
             {/* Contact Info */}
             <div>
               <h4 className="font-playfair text-lg font-bold mb-4">Contact</h4>
               <ul className="space-y-2 text-[#f6ead0]">
                 <li className="flex items-center">
-                  <i className="fas fa-phone mr-2"></i>
-                  (555) 123-4567
+                  <FaPhone className="mr-2" />
+                  (202) 555-0173
                 </li>
                 <li className="flex items-center">
-                  <i className="fas fa-envelope mr-2"></i>
+                  <FaEnvelope className="mr-2" />
                   hello@feveventdecor.com
                 </li>
                 <li className="flex items-center">
-                  <i className="fas fa-map-marker-alt mr-2"></i>
-                  Los Angeles, CA
+                  <FaMapMarkerAlt className="mr-2" />
+                  Washington D.C.
                 </li>
               </ul>
             </div>
           </div>
-  
+
           <div className="border-t border-[#e6caa6] mt-8 pt-8 text-center">
             <p className="text-[#f6ead0]">
               © {new Date().getFullYear()} Fev Event Decor. All rights reserved. | Privacy Policy | Terms of Service

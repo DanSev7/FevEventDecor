@@ -50,12 +50,13 @@ export default function Contact() {
           viewport={{ once: true }}
           className="text-center mb-16"
         >
-          <h2 className="font-playfair text-4xl lg:text-5xl font-bold text-amber-900 dark:text-gray-200 mb-4">
+          <h2 className="font-playfair text-3xl lg:text-5xl md:text-2xl sm:text-xl font-bold text-[#392013] dark:text-gray-200 mb-4">
             Let's Create Something Beautiful
           </h2>
           <p className="text-lg text-amber-900 dark:text-yellow-100 max-w-2xl mx-auto">
-            Ready to bring your vision to life? Contact us today to discuss your upcoming event.
+            Ready to bring your vision to life? Contact us today to discuss your 
           </p>
+          <p className="text-lg text-amber-900 dark:text-yellow-100 max-w-2xl mx-auto">upcoming event.</p>
         </motion.div>
 
         <div className="grid lg:grid-cols-2 gap-12">
@@ -156,7 +157,7 @@ export default function Contact() {
                   </div>
                   <div>
                     <p className="font-semibold text-rich-brown dark:text-gray-200">Phone</p>
-                    <p className="text-warm-brown dark:text-gray-200">(555) 123-4567</p>
+                    <p className="text-warm-brown dark:text-gray-200">(202) 555-0173</p>
                   </div>
                 </div>
                 <div className="flex items-center">
@@ -174,7 +175,7 @@ export default function Contact() {
                   </div>
                   <div>
                     <p className="font-semibold text-rich-brown dark:text-gray-200">Location</p>
-                    <p className="text-warm-brown dark:text-gray-200">Los Angeles, CA</p>
+                    <p className="text-warm-brown dark:text-gray-200">Washington D.C.</p>
                   </div>
                 </div>
               </div>
