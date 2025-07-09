@@ -3,9 +3,9 @@ import { motion } from "framer-motion";
 
 export default function About() {
   return (
-    <section id="about" className="py-16 lg:py-24 bg-[#f6ead0] dark:bg-[#47360e]">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="grid lg:grid-cols-2 gap-12 items-center">
+    <section id="about" className="py-16 lg:py-24 bg-[#f6ead0] dark:bg-[#47360e] px-4">
+      <div className="container mx-auto px-4 max-w-7xl">
+        <div className="max-w-4xl grid lg:grid-cols-2 gap-12 items-center">
           {/* Text Content */}
           <motion.div
             initial={{ opacity: 0, x: -50 }}
@@ -49,7 +49,7 @@ export default function About() {
               className="rounded-2xl shadow-2xl w-full h-auto"
               loading="lazy"
             />
-            <div className="absolute -bottom-6 -right-6 bg-gradient-to-r from-yellow-400 via-yellow-600 to-yellow-700 p-6 rounded-2xl shadow-xl">
+            <div className="absolute -bottom-5 -right-4 bg-gradient-to-r from-yellow-400 via-yellow-600 to-yellow-700 p-4 rounded-2xl shadow-xl">
               <div className="text-center">
                 <div className="text-3xl font-bold text-white font-serif">
                   2+

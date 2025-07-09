@@ -37,8 +37,8 @@ export default function Navigation() {
   };
 
   return (
-    <nav className="fixed top-0 left-0 right-0 z-50 bg-white/95 dark:bg-[#181a1b] backdrop-blur-md shadow-lg">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <nav className="fixed top-0 left-0 right-0 z-50 bg-white/95 dark:bg-[#181a1b] backdrop-blur-md shadow-lg px-4">
+      <div className="max-w-7xl mx-auto">
         <div className="flex items-center justify-between h-16">
           {/* Logo */}
           <div className="flex items-center">
@@ -102,6 +102,7 @@ export default function Navigation() {
             <button
               onClick={() => setIsMenuOpen(!isMenuOpen)}
               className="text-yellow-800 dark:text-yellow-200 hover:text-yellow-600 dark:hover:text-yellow-400 focus:outline-none cursor-pointer"
+              aria-label={isMenuOpen ? "Close menu" : "Open menu"}
             >
               {isMenuOpen ? <X size={24} /> : <Menu size={24} />}
             </button>
@@ -116,13 +117,16 @@ export default function Navigation() {
           animate={{ opacity: 1, y: 0 }}
           exit={{ opacity: 0, y: -10 }}
           className="md:hidden bg-white dark:bg-gray-900 border-t dark:border-gray-800"
+          role="menu"
         >
           <div className="px-4 pt-2 pb-4 space-y-2">
             {["home", "about", "services", "portfolio", "contact"].map((item) => (
               <button
                 key={item}
                 onClick={() => scrollToSection(item)}
-                className="cursor-pointer block w-full text-left px-3 py-2 text-yellow-800 dark:text-yellow-200 hover:text-yellow-600 dark:hover:text-yellow-400 transition duration-200"
+                className="cursor-pointer block w-full text-left px-3 py-2 text-yellow-800 dark:text-yellow-200 hover:text-yellow-600 dark:hover:text-yellow-400 transition duration-200 capitalize"
+                role="menuitem"
+                aria-label={item.charAt(0).toUpperCase() + item.slice(1) + " section"}
               >
                 {item.charAt(0).toUpperCase() + item.slice(1)}
               </button>
@@ -130,6 +134,8 @@ export default function Navigation() {
             <button
               onClick={() => scrollToSection("contact")}
               className="cursor-pointer block mt-4 w-full bg-gradient-to-r from-yellow-400 via-yellow-600 to-yellow-700 hover:from-yellow-600 hover:to-yellow-500 text-white px-4 py-2 rounded-full font-medium transition duration-300 shadow-md"
+              role="menuitem"
+              aria-label="Book Now"
             >
               Book Now
             </button>

@@ -42,10 +42,10 @@ const portfolioItems = [
 
 export default function Portfolio() {
   return (
-    <section id="portfolio" className="py-16 lg:py-24 bg-[#f6ead0] dark:bg-[#47360e]">
+    <section id="portfolio" className="py-16 lg:py-24 bg-[#f6ead0] dark:bg-[#47360e] px-8">
 
 
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div className="max-w-7xl mx-auto">
         {/* Header */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
