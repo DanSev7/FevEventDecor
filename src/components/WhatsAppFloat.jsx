@@ -7,7 +7,7 @@ const message = encodeURIComponent("Hello! I'm interested in your services.");
 const WhatsAppFloat = () => (
   <a
     href={`https://wa.me/${whatsappNumber}?text=${message}`}
-    className="fixed bottom-8 right-8 z-50 rounded-full shadow-lg bg-green-500 hover:bg-green-600 text-white p-4 flex items-center justify-center animate-bounce focus:outline-none focus:ring-4 focus:ring-green-300 transition-transform duration-200 hover:scale-110 hover:shadow-2xl"
+    className="fixed bottom-8 right-8 z-50 rounded-full shadow-lg bg-green-500 hover:bg-green-600 text-white p-4 flex items-center justify-center animate-bounce focus:outline-none focus:ring-2 focus:ring-green-300 transition-transform duration-200 hover:scale-110 hover:shadow-2xl"
     target="_blank"
     rel="noopener noreferrer"
     aria-label="Chat with us on WhatsApp"

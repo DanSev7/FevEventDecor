@@ -37,7 +37,7 @@ export default function Navigation() {
   };
 
   return (
-    <nav className="fixed top-0 left-0 right-0 z-50 bg-white/70 dark:bg-[#181a1b]/80 backdrop-blur-xl shadow-2xl border-b border-yellow-100 dark:border-yellow-900 px-4 transition-all duration-300">
+    <nav className="fixed top-0 left-0 right-0 z-50 bg-white/90 dark:bg-[#181a1b]/80 backdrop-blur-xl shadow-2xl border-b border-yellow-100 dark:border-yellow-900 px-4 transition-all duration-300">
       <div className="max-w-7xl mx-auto">
         <div className="flex items-center justify-between h-16">
           {/* Logo */}
@@ -116,7 +116,7 @@ export default function Navigation() {
           initial={{ opacity: 0, y: -10 }}
           animate={{ opacity: 1, y: 0 }}
           exit={{ opacity: 0, y: -10 }}
-          className="md:hidden bg-white dark:bg-gray-900 border-t dark:border-gray-800"
+          className="md:hidden bg-white/90 dark:bg-gray-900 border-t dark:border-gray-800"
           role="menu"
         >
           <div className="px-4 pt-2 pb-4 space-y-2">
