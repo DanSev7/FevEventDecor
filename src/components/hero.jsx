@@ -124,17 +124,17 @@ export default function Hero() {
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.6 }}
-          className="flex flex-col sm:flex-row gap-4 justify-center"
+          className="flex flex-col sm:flex-row gap-4 justify-center w-full max-w-4xl mx-auto"
         >
           <button
             onClick={() => scrollToSection("services")}
-            className="cursor-pointer bg-gradient-to-r from-yellow-400 via-yellow-600 to-yellow-700 hover:from-yellow-500 hover:to-yellow-600 text-white px-8 py-3 rounded-full font-semibold text-lg transition duration-300 shadow-lg"
+            className="cursor-pointer bg-gradient-to-r from-yellow-400 via-yellow-600 to-yellow-700 hover:from-yellow-500 hover:to-yellow-600 text-white px-8 py-3 rounded-full font-semibold text-lg transition duration-300 shadow-lg w-full sm:w-auto"
           >
             Get Started
           </button>
           <button
             onClick={() => scrollToSection("contact")}
-            className="cursor-pointer border border-yellow-400 text-yellow-100 hover:bg-yellow-500 hover:text-white px-8 py-3 rounded-full font-semibold text-lg transition duration-300"
+            className="cursor-pointer border border-yellow-400 text-yellow-100 hover:bg-yellow-500 hover:text-white px-8 py-3 rounded-full font-semibold text-lg transition duration-300 w-full sm:w-auto"
           >
             Book Now
           </button>

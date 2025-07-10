@@ -19,19 +19,19 @@ export default function About() {
             <h2 className="font-playfair text-3xl sm:text-4xl lg:text-5xl font-bold text-[#392013] dark:text-gray-100 mb-6">
               Our Story
             </h2>
-            <p className="text-lg text-yellow-900 dark:text-yellow-100 mb-6 leading-relaxed">
+            <p className="text-lg text-yellow-900 dark:text-yellow-100 mb-6 leading-relaxed text-justify">
               At Fev Event Decor, we believe every celebration deserves to be
               extraordinary. With over a decade of experience in luxury event
               planning and design, we transform your vision into breathtaking
               reality.
             </p>
-            <p className="text-lg text-yellow-900 dark:text-yellow-100 mb-6 leading-relaxed">
+            <p className="text-lg text-yellow-900 dark:text-yellow-100 mb-6 leading-relaxed text-justify">
               Our passionate team specializes in creating bespoke experiences
               that reflect your unique style and story. From intimate gatherings
               to grand celebrations, we handle every detail with precision and
               artistry.
             </p>
-            <p className="text-lg text-yellow-900 dark:text-yellow-100 leading-relaxed">
+            <p className="text-lg text-yellow-900 dark:text-yellow-100 leading-relaxed text-justify">
               We're not just event planners – we're dream architects, crafting
               memories that last a lifetime through impeccable design and
               flawless execution.
