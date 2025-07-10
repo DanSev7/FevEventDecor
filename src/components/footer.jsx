@@ -1,6 +1,8 @@
 import React from "react";
 import { motion } from "framer-motion";
 import { FaPhone, FaEnvelope, FaMapMarkerAlt, FaInstagram, FaFacebook, FaPinterest, FaTwitter, FaStar, FaHeart, FaGem } from "react-icons/fa";
+import ScrollToTop from "./ScrollToTop";
+
 export default function Footer() {
     const scrollToSection = (sectionId) => {
       const element = document.getElementById(sectionId);
@@ -125,6 +127,7 @@ export default function Footer() {
             </p>
           </div>
         </div>
+        <ScrollToTop />
       </footer>
     );
   }
