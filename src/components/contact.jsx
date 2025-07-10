@@ -41,7 +41,22 @@ export default function Contact() {
 
   return (
     <section id="contact" className="py-16 lg:py-24 bg-[#f6ead0] dark:bg-[#47360e] px-4 relative overflow-hidden">
-
+      {/* Animated Gradient Background Shape */}
+      <motion.div
+        initial={{ opacity: 0, scale: 0.7 }}
+        animate={{ opacity: 0.18, scale: 1 }}
+        transition={{ duration: 1.2, delay: 0.2 }}
+        className="absolute -top-32 -left-32 w-[420px] h-[420px] rounded-full bg-gradient-to-tr from-yellow-200 via-yellow-400 to-yellow-600 blur-3xl z-0"
+      />
+      {/* Subtle Gradient Overlay */}
+      <div className="pointer-events-none absolute inset-0 bg-gradient-to-br from-yellow-100/60 via-transparent to-yellow-200/90 dark:from-yellow-900/20 dark:to-yellow-700/30 z-0" />
+      {/* Animated Gradient Background Shape */}
+      <motion.div
+        initial={{ opacity: 0, scale: 0.7 }}
+        animate={{ opacity: 0.11, scale: 1 }}
+        transition={{ duration: 1.2, delay: 0.2 }}
+        className="absolute -bottom-32 -left-32 w-[420px] h-[420px] rounded-full bg-gradient-to-tr from-yellow-200 via-yellow-400 to-yellow-600 blur-3xl z-0"
+      />
       <div className="container mx-auto px-4 max-w-5xl">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -65,8 +80,13 @@ export default function Contact() {
             whileInView={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
-            className="bg-white rounded-2xl p-8 shadow-lg dark:bg-[#181a1b]"
+            className="bg-white rounded-2xl p-1 shadow-xl dark:bg-[#181a1b] relative"
+            style={{ boxShadow: '0 8px 32px 0 rgba(255, 204, 0, 0.13)' }}
           >
+            {/* Glowing Gradient Border */}
+            <div className="absolute inset-0 rounded-2xl pointer-events-none z-0" style={{boxShadow:'0 0 0 4px rgba(251,191,36,0.25), 0 0 40px 0 rgba(251,191,36,0.15)'}}></div>
+            <div className="relative z-10 p-7 sm:p-8">
+
             <h3 className="font-playfair text-2xl font-bold text-amber-900 dark:text-gray-200 mb-6">
               Get in Touch
             </h3>
@@ -76,7 +96,7 @@ export default function Contact() {
                 <input
                   type="text"
                   {...register("name")}
-                  className="w-full rounded-md border border-gray-300 px-3 dark:text-gray-400 py-2 focus:outline-none focus:ring-2 focus:ring-yellow-500 focus:border-yellow-500"
+                  className="w-full rounded-md border border-gray-300 px-3 dark:text-gray-400 py-2 focus:outline-none focus:ring-2 focus:ring-yellow-500 focus:border-yellow-500 transition-shadow duration-300 focus:shadow-yellow-200/50"
                   placeholder="Your full name"
                 />
                 {errors.name && <p className="text-red-500 text-sm mt-1">{errors.name.message}</p>}
@@ -87,7 +107,7 @@ export default function Contact() {
                 <input
                   type="email"
                   {...register("email")}
-                  className="w-full rounded-md border border-gray-300 px-3 dark:text-gray-400 py-2 focus:outline-none focus:ring-2 focus:ring-yellow-500 focus:border-yellow-500"
+                  className="w-full rounded-md border border-gray-300 px-3 dark:text-gray-400 py-2 focus:outline-none focus:ring-2 focus:ring-yellow-500 focus:border-yellow-500 transition-shadow duration-300 focus:shadow-yellow-200/50"
                   placeholder="your@email.com"
                 />
                 {errors.email && <p className="text-red-500 text-sm mt-1">{errors.email.message}</p>}
@@ -98,44 +118,46 @@ export default function Contact() {
                 <input
                   type="tel"
                   {...register("phone")}
-                  className="w-full rounded-md border border-gray-300 px-3 dark:text-gray-400 py-2 focus:outline-none focus:ring-2 focus:ring-yellow-500 focus:border-yellow-500"
-                  placeholder="(555) 123-4567"
+                  className="w-full rounded-md border border-gray-300 px-3 dark:text-gray-400 py-2 focus:outline-none focus:ring-2 focus:ring-yellow-500 focus:border-yellow-500 transition-shadow duration-300 focus:shadow-yellow-200/50"
+                  placeholder="(optional)"
                 />
               </div>
 
-              <CustomSelect
-                label="Event Type"
-                name="eventType"
-                value={watch("eventType")}
-                onChange={(e) => setValue("eventType", e.target.value)}
-                options={[
-                  { label: "Wedding", value: "wedding" },
-                  { label: "Corporate Event", value: "corporate" },
-                  { label: "Birthday Party", value: "birthday" },
-                  { label: "Baby Shower", value: "babyshower" },
-                  { label: "Anniversary", value: "anniversary" },
-                  { label: "Other", value: "other" },
-                ]}
-              />
-              {errors.eventType && <p className="text-red-500 text-sm">{errors.eventType.message}</p>}
+              <div>
+                <label className="block text-warm-brown dark:text-gray-400 font-medium mb-1">Event Type</label>
+                <CustomSelect
+                  {...register("eventType")}
+                  options={[
+                    { value: "wedding", label: "Wedding" },
+                    { value: "birthday", label: "Birthday" },
+                    { value: "corporate", label: "Corporate" },
+                    { value: "other", label: "Other" },
+                  ]}
+                  className="w-full rounded-md border border-gray-300 px-3 dark:text-gray-400 py-2 focus:outline-none focus:ring-2 focus:ring-yellow-500 focus:border-yellow-500 transition-shadow duration-300 focus:shadow-yellow-200/50"
+                  placeholder="Select event type"
+                />
+                {errors.eventType && <p className="text-red-500 text-sm mt-1">{errors.eventType.message}</p>}
+              </div>
 
               <div>
                 <label className="block text-warm-brown dark:text-gray-400 font-medium mb-1">Message</label>
                 <textarea
                   {...register("message")}
-                  placeholder="Tell us about your event vision..."
-                  className="w-full min-h-[100px] rounded-md border border-gray-300 px-3 dark:text-gray-400 py-2 focus:outline-none focus:ring-2 focus:ring-yellow-500 focus:border-yellow-500"
+                  className="w-full rounded-md border border-gray-300 px-3 dark:text-gray-400 py-2 focus:outline-none focus:ring-2 focus:ring-yellow-500 focus:border-yellow-500 transition-shadow duration-300 focus:shadow-yellow-200/50"
+                  rows={5}
+                  placeholder="Tell us about your event..."
                 />
                 {errors.message && <p className="text-red-500 text-sm mt-1">{errors.message.message}</p>}
               </div>
 
               <button
                 type="submit"
-                className="w-full rounded-md bg-gradient-to-r from-yellow-400 to-yellow-700 hover:from-yellow-700 hover:to-yellow-500 text-white font-semibold transition duration-300 py-3 cursor-pointer"
+                className="w-full rounded-md bg-gradient-to-r from-yellow-400 to-yellow-700 hover:from-yellow-700 hover:to-yellow-500 text-white font-semibold transition duration-300 py-3 cursor-pointer shadow-lg hover:shadow-yellow-400/30"
               >
                 Send Message
               </button>
             </form>
+            </div>
           </motion.div>
 
           {/* Contact Information Section */}

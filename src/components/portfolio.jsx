@@ -43,18 +43,29 @@ const portfolioItems = [
 
 export default function Portfolio() {
   return (
-    <section id="portfolio" className="py-16 lg:py-24 bg-[#f6ead0] dark:bg-[#47360e] px-8 relative overflow-hidden">
+    <section id="portfolio" className="py-16 lg:py-24 bg-[#f6ead0] dark:bg-[#47360e] px-4 relative overflow-hidden">
+      {/* Animated Gradient Background Shape */}
+      <motion.div
+        initial={{ opacity: 0, scale: 0.7 }}
+        animate={{ opacity: 0.18, scale: 1 }}
+        transition={{ duration: 1.2, delay: 0.2 }}
+        className="absolute -top-32 -left-32 w-[420px] h-[420px] rounded-full bg-gradient-to-tr from-yellow-200 via-yellow-400 to-yellow-600 blur-3xl z-0"
+      />
+      {/* Subtle Gradient Overlay */}
+      <div className="pointer-events-none absolute inset-0 bg-gradient-to-br from-yellow-100/60 via-transparent to-yellow-200/90 dark:from-yellow-900/20 dark:to-yellow-700/30 z-0" />
 
 
       <div className="max-w-7xl mx-auto">
         {/* Header */}
         <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8 }}
-          viewport={{ once: true }}
-          className="text-center mb-16"
+           initial={{ opacity: 0, y: 20 }}
+           whileInView={{ opacity: 1, y: 0 }}
+           transition={{ duration: 0.8 }}
+           viewport={{ once: true }}
+           className="text-center mb-16"
         >
+      <div className="pointer-events-none absolute inset-0 bg-gradient-to-br from-yellow-100/60 via-transparent to-yellow-200/90 dark:from-yellow-900/20 dark:to-yellow-700/30 z-0" />
+
           <h2 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-[#392013] dark:text-gray-200 font-serif mb-4">
             Our Portfolio
           </h2>

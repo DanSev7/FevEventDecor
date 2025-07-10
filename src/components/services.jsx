@@ -43,13 +43,13 @@ export default function Services() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section Header */}
         <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8 }}
-          viewport={{ once: true }}
-          className="text-center mb-16"
+           initial={{ opacity: 0, y: 20 }}
+           whileInView={{ opacity: 1, y: 0 }}
+           transition={{ duration: 0.8 }}
+           viewport={{ once: true }}
+           className="text-center mb-16"
         >
-          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-[#392013] dark:text-gray-200 mb-4 font-serif">
+          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-[#392013] dark:text-gray-200 font-serif mb-4">
             Our Services
           </h2>
           <p className="text-lg text-gray-700 dark:text-yellow-100 max-w-2xl mx-auto">

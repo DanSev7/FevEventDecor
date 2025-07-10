@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { Menu, X, Sun, Moon } from "lucide-react";
+import { FaHome, FaRegSmile, FaStar, FaCamera, FaPhone } from "react-icons/fa";
 
 export default function Navigation() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -47,11 +48,11 @@ export default function Navigation() {
   };
 
   const navItems = [
-    { id: "home", label: "Home", icon: "🏠" },
-    { id: "about", label: "About", icon: "👋" },
-    { id: "services", label: "Services", icon: "⭐" },
-    { id: "portfolio", label: "Portfolio", icon: "📸" },
-    { id: "contact", label: "Contact", icon: "📞" }
+    { id: "home", label: "Home", icon: <FaHome /> },
+    { id: "about", label: "About", icon: <FaRegSmile /> },
+    { id: "services", label: "Services", icon: <FaStar /> },
+    { id: "portfolio", label: "Portfolio", icon: <FaCamera /> },
+    { id: "contact", label: "Contact", icon: <FaPhone /> }
   ];
 
   return (

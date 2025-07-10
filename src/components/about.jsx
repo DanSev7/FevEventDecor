@@ -6,6 +6,15 @@ export default function About() {
   return (
     // <section id="about" className="py-16 lg:py-24 bg-champagne">
     <section id="about" className="py-16 lg:py-24 bg-[#f6ead0] dark:bg-[#47360e] px-4 relative overflow-hidden">
+      {/* Animated Gradient Background Shape */}
+      <motion.div
+        initial={{ opacity: 0, scale: 0.7 }}
+        animate={{ opacity: 0.18, scale: 1 }}
+        transition={{ duration: 1.2, delay: 0.2 }}
+        className="absolute -top-32 -left-32 w-[420px] h-[420px] rounded-full bg-gradient-to-tr from-yellow-200 via-yellow-400 to-yellow-600 blur-3xl z-0"
+      />
+      {/* Subtle Gradient Overlay */}
+      <div className="pointer-events-none absolute inset-0 bg-gradient-to-br from-yellow-100/60 via-transparent to-yellow-200/90 dark:from-yellow-900/20 dark:to-yellow-700/30 z-0" />
 
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -16,8 +25,24 @@ export default function About() {
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
           >
-            <h2 className="font-playfair text-3xl sm:text-4xl lg:text-5xl font-bold text-[#392013] dark:text-gray-100 mb-6">
+            <h2 className="font-playfair text-3xl sm:text-4xl lg:text-5xl font-bold text-[#392013] dark:text-gray-100 mb-6 flex items-center gap-4">
+              <motion.span
+                initial={{ scale: 0, rotate: -30 }}
+                animate={{ scale: 1, rotate: 0 }}
+                transition={{ type: 'spring', stiffness: 200, damping: 10, delay: 0.2 }}
+                className="inline-flex items-center justify-center text-yellow-500 bg-white dark:bg-yellow-900 rounded-full shadow-lg p-2 mr-2 animate-pulse"
+              >
+                <FaGem size={28} />
+              </motion.span>
               Our Story
+              <motion.span
+                initial={{ scale: 0, rotate: 30 }}
+                animate={{ scale: 1, rotate: 0 }}
+                transition={{ type: 'spring', stiffness: 200, damping: 10, delay: 0.4 }}
+                className="inline-flex items-center justify-center text-yellow-600 bg-white dark:bg-yellow-900 rounded-full shadow-lg p-2 ml-2 animate-pulse"
+              >
+                <FaStar size={24} />
+              </motion.span>
             </h2>
             <p className="text-lg text-yellow-900 dark:text-yellow-100 mb-6 leading-relaxed text-justify">
               At Fev Event Decor, we believe every celebration deserves to be
@@ -36,6 +61,7 @@ export default function About() {
               memories that last a lifetime through impeccable design and
               flawless execution.
             </p>
+            
           </motion.div>
 
           <motion.div
