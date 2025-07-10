@@ -50,7 +50,7 @@ export default function Contact() {
           viewport={{ once: true }}
           className="text-center mb-16"
         >
-          <h2 className="font-playfair text-3xl lg:text-5xl md:text-2xl sm:text-xl font-bold text-[#392013] dark:text-gray-200 mb-4">
+          <h2 className="font-playfair text-2xl lg:text-5xl md:text-2xl sm:text-xl font-bold text-[#392013] dark:text-gray-200 mb-4">
             Let's Create Something Beautiful
           </h2>
           <p className="text-lg text-amber-900 dark:text-yellow-100 max-w-2xl mx-auto">
