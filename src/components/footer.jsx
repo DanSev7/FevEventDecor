@@ -25,7 +25,7 @@ export default function Footer() {
                 Creating unforgettable experiences through luxury event planning and design. Let us transform your vision into reality.
               </p>
               <div className="flex space-x-4">
-                <a href="#" className="text-[#f6ead0] hover:text-yellow-500 transition-colors animate-pulse">
+                <a href="https://www.instagram.com/fev_eventdecor" className="text-[#f6ead0] hover:text-yellow-500 transition-colors animate-pulse">
                   <FaInstagram className="text-xl" />
                 </a>
                 <a href="#" className="text-[#f6ead0] hover:text-yellow-500 transition-colors animate-bounce">

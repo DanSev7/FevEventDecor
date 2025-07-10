@@ -186,7 +186,7 @@ export default function Contact() {
                 Follow Us
               </h3>
               <div className="flex space-x-4">
-                <a href="#" className="w-12 h-12 bg-yellow-500 hover:bg-yellow-800 rounded-full flex items-center justify-center hover:bg-warm-brown transition-colors">
+                <a href="https://www.instagram.com/fev_eventdecor" className="w-12 h-12 bg-yellow-500 hover:bg-yellow-800 rounded-full flex items-center justify-center hover:bg-warm-brown transition-colors">
                   <FaInstagram className="text-yellow-50" size={24} />
                 </a>
                 <a href="#" className="w-12 h-12 bg-yellow-500 hover:bg-yellow-800 rounded-full flex items-center justify-center hover:bg-warm-brown transition-colors">

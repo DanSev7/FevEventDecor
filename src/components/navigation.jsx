@@ -116,7 +116,7 @@ export default function Navigation() {
           initial={{ opacity: 0, y: -10 }}
           animate={{ opacity: 1, y: 0 }}
           exit={{ opacity: 0, y: -10 }}
-          className="md:hidden bg-white/90 dark:bg-gray-900 border-t dark:border-gray-800"
+          className="md:hidden bg-white/90 dark:bg-[#181a1b] border-t dark:border-gray-800"
           role="menu"
         >
           <div className="px-4 pt-2 pb-4 space-y-2">
