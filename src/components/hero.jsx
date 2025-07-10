@@ -169,7 +169,7 @@ export default function Hero() {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 1, delay: 0.8 }}
-              className="text-lg sm:text-xl text-gray-200 mb-10 max-w-2xl leading-relaxed font-light mx-auto"
+              className="text-lg sm:text-xl text-gray-200 mb-10 max-w-2xl leading-relaxed font-medium mx-auto"
             >
               {heroSlides[currentSlide].desc}
             </motion.p>
@@ -182,7 +182,7 @@ export default function Hero() {
             >
               <button
                 onClick={() => scrollToSection("services")}
-                className="group relative cursor-pointer bg-gradient-to-r from-yellow-400 via-yellow-500 to-yellow-600 hover:from-yellow-500 hover:via-yellow-600 hover:to-yellow-700 text-black px-10 py-4 rounded-full font-semibold text-lg transition-all duration-500 shadow-2xl transform hover:scale-105 hover:shadow-yellow-500/30 w-full sm:w-auto overflow-hidden"
+                className="group relative cursor-pointer bg-gradient-to-r from-yellow-500 via-yellow-600 to-yellow-700 hover:from-yellow-600 hover:via-yellow-700 hover:to-yellow-800 text-black px-10 py-4 rounded-full font-semibold text-lg transition-all duration-500 shadow-2xl transform hover:scale-105 hover:shadow-yellow-500/30 w-full sm:w-auto overflow-hidden"
               >
                 <span className="relative z-10">Get Started</span>
                 <div className="absolute inset-0 bg-gradient-to-r from-yellow-600 to-yellow-700 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
