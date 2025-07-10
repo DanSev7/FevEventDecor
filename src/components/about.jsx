@@ -1,10 +1,12 @@
 import React from "react";
 import { motion } from "framer-motion";
+import { FaStar, FaGem, FaHeart } from "react-icons/fa";
 
 export default function About() {
   return (
     // <section id="about" className="py-16 lg:py-24 bg-champagne">
-    <section id="about" className="py-16 lg:py-24 bg-[#f6ead0] dark:bg-[#47360e] px-4">
+    <section id="about" className="py-16 lg:py-24 bg-[#f6ead0] dark:bg-[#47360e] px-4 relative overflow-hidden">
+
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid lg:grid-cols-2 gap-12 items-center">
@@ -43,15 +45,18 @@ export default function About() {
             viewport={{ once: true }}
             className="relative"
           >
-            <img
-              src="https://images.unsplash.com/photo-1519167758481-83f550bb49b3?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=800&h=600"
-              alt="Elegant wedding reception with floral arrangements"
-              className="rounded-2xl shadow-2xl w-full h-auto"
-            />
-            <div className="absolute -bottom-5 -right-4 bg-gradient-to-r from-yellow-400 via-yellow-600 to-yellow-700 p-4 rounded-2xl shadow-xl">
+            <div className="relative group">
+              <img
+                src="https://images.unsplash.com/photo-1519167758481-83f550bb49b3?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=800&h=600"
+                alt="Elegant wedding reception with floral arrangements"
+                className="rounded-2xl shadow-2xl w-full h-auto border-4 border-yellow-300 group-hover:scale-105 transition-transform duration-300"
+              />
+              <div className="absolute inset-0 rounded-2xl border-4 border-yellow-500 opacity-0 group-hover:opacity-80 transition-opacity duration-300 pointer-events-none"></div>
+            </div>
+            <div className="absolute -bottom-5 -right-4 bg-gradient-to-r from-yellow-400 via-yellow-600 to-yellow-700 p-4 rounded-2xl shadow-xl animate-bounce">
               <div className="text-center">
-                <div className="text-3xl font-bold text-white font-serif">
-                  2+
+                <div className="text-3xl font-bold text-white font-serif animate-pulse">
+                  <span id="years-exp">2+</span>
                 </div>
                 <div className="text-sm text-white font-medium">
                   Years Experience

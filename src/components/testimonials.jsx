@@ -1,6 +1,7 @@
 import React from "react";
 import { motion } from "framer-motion";
-import { Star } from "lucide-react";
+// import { Star } from "lucide-react";
+import { FaStar } from "react-icons/fa";
 
 const testimonials = [
   {
@@ -25,7 +26,7 @@ const testimonials = [
 
 export default function Testimonials() {
   return (
-    <section id="services" className="py-16 lg:py-24 bg-white dark:bg-[#181a1b]">
+    <section id="services" className="py-16 lg:py-24 bg-white dark:bg-[#181a1b] relative overflow-hidden">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header */}
         <motion.div
@@ -54,9 +55,9 @@ export default function Testimonials() {
               viewport={{ once: true }}
               className="rounded-2xl p-8 bg-white dark:bg-[#2e2e2e] shadow-md"
             >
-              <div className="flex items-center mb-4 text-yellow-500">
+              <div className="flex items-center mb-4 text-yellow-500 gap-1">
                 {[...Array(5)].map((_, i) => (
-                  <Star key={i} size={18} fill="currentColor" />
+                  <FaStar key={i} className="animate-pulse" size={18} />
                 ))}
               </div>
               <p className="text-yellow-900 dark:text-yellow-100 mb-6 italic">

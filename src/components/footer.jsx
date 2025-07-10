@@ -1,5 +1,5 @@
 import React from "react";
-import { FaPhone, FaEnvelope, FaMapMarkerAlt, FaInstagram, FaFacebook, FaPinterest, FaTwitter } from "react-icons/fa";
+import { FaPhone, FaEnvelope, FaMapMarkerAlt, FaInstagram, FaFacebook, FaPinterest, FaTwitter, FaStar, FaHeart, FaGem } from "react-icons/fa";
 export default function Footer() {
     const scrollToSection = (sectionId) => {
       const element = document.getElementById(sectionId);
@@ -9,7 +9,8 @@ export default function Footer() {
     };
   
     return (
-      <footer className="bg-[#211109] dark:bg-[#181a1b] text-white dark:text-[#f6ead0] py-12">
+      <footer className="bg-[#211109] dark:bg-[#181a1b] text-white dark:text-[#f6ead0] py-12 relative overflow-hidden">
+
         <div className="container mx-auto px-4 max-w-6xl">
           <div className="grid md:grid-cols-4 gap-8">
             {/* Logo and Description */}
@@ -24,16 +25,16 @@ export default function Footer() {
                 Creating unforgettable experiences through luxury event planning and design. Let us transform your vision into reality.
               </p>
               <div className="flex space-x-4">
-                <a href="#" className="text-[#f6ead0] hover:text-yellow-500 transition-colors">
+                <a href="#" className="text-[#f6ead0] hover:text-yellow-500 transition-colors animate-pulse">
                   <FaInstagram className="text-xl" />
                 </a>
-                <a href="#" className="text-[#f6ead0] hover:text-yellow-500 transition-colors">
+                <a href="#" className="text-[#f6ead0] hover:text-yellow-500 transition-colors animate-bounce">
                   <FaFacebook className="text-xl" />
                 </a>
-                <a href="#" className="text-[#f6ead0] hover:text-yellow-500 transition-colors">
+                <a href="#" className="text-[#f6ead0] hover:text-yellow-500 transition-colors animate-pulse">
                   <FaPinterest className="text-xl" />
                 </a>
-                <a href="#" className="text-[#f6ead0] hover:text-yellow-500 transition-colors">
+                <a href="#" className="text-[#f6ead0] hover:text-yellow-500 transition-colors animate-bounce">
                   <FaTwitter className="text-xl" />
                 </a>
               </div>

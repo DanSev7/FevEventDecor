@@ -1,11 +1,10 @@
 import React from "react";
-import { FaInstagram, FaFacebook, FaPinterest, FaTwitter } from "react-icons/fa";
+import { FaInstagram, FaFacebook, FaPinterest, FaTwitter, FaStar, FaHeart, FaGem, FaPhoneAlt, FaEnvelope, FaMapMarkerAlt } from "react-icons/fa";
 import { motion } from "framer-motion";
 import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { z } from "zod";
 import CustomSelect from "./ui/CustomSelect";
-import { Phone, Mail, MapPin } from "lucide-react";
 
 const contactFormSchema = z.object({
   name: z.string().min(2, "Name must be at least 2 characters"),
@@ -41,7 +40,8 @@ export default function Contact() {
   };
 
   return (
-    <section id="contact" className="py-16 lg:py-24 bg-[#f6ead0] dark:bg-[#47360e] px-4">
+    <section id="contact" className="py-16 lg:py-24 bg-[#f6ead0] dark:bg-[#47360e] px-4 relative overflow-hidden">
+
       <div className="container mx-auto px-4 max-w-5xl">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -152,8 +152,8 @@ export default function Contact() {
               </h3>
               <div className="space-y-4">
                 <div className="flex items-center">
-                  <div className="w-12 h-12 bg-yellow-500 rounded-full flex items-center justify-center mr-4">
-                    <Phone className="text-yellow-50" size={20} />
+                  <div className="w-12 h-12 bg-yellow-500 rounded-full flex items-center justify-center mr-4 shadow-sm animate-bounce">
+                    <FaPhoneAlt className="text-white font-bold" size={20} />
                   </div>
                   <div>
                     <p className="font-semibold text-rich-brown dark:text-gray-200">Phone</p>
@@ -161,8 +161,8 @@ export default function Contact() {
                   </div>
                 </div>
                 <div className="flex items-center">
-                  <div className="w-12 h-12 bg-yellow-500 rounded-full flex items-center justify-center mr-4">
-                    <Mail className="text-yellow-50" size={20} />
+                  <div className="w-12 h-12 bg-yellow-500 rounded-full flex items-center justify-center mr-4 shadow-sm animate-pulse">
+                    <FaEnvelope className="text-white font-bold" size={20} />
                   </div>
                   <div>
                     <p className="font-semibold text-rich-brown dark:text-gray-200">Email</p>
@@ -170,8 +170,8 @@ export default function Contact() {
                   </div>
                 </div>
                 <div className="flex items-center">
-                  <div className="w-12 h-12 bg-yellow-500 rounded-full flex items-center justify-center mr-4">
-                    <MapPin className="text-yellow-50" size={20} />
+                  <div className="w-12 h-12 bg-yellow-500 rounded-full flex items-center justify-center mr-4 shadow-sm animate-bounce">
+                    <FaMapMarkerAlt className="text-white font-bold" size={20} />
                   </div>
                   <div>
                     <p className="font-semibold text-rich-brown dark:text-gray-200">Location</p>

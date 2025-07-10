@@ -66,12 +66,12 @@ export default function Services() {
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: index * 0.1 }}
               viewport={{ once: true }}
-              className={`${service.bg} dark:bg-[#2e2e2e] rounded-2xl p-8 text-center shadow-md hover:shadow-xl dark:shadow-none dark:hover:shadow-yellow-700/30 transition duration-300`}
+              className={`${service.bg} dark:bg-[#2e2e2e] rounded-2xl p-8 text-center shadow-md hover:shadow-2xl dark:shadow-none dark:hover:shadow-yellow-700/30 transition duration-300 group scale-100 hover:scale-105 cursor-pointer`}
             >
               <div
-                className={`w-16 h-16 ${service.iconBg} rounded-full flex items-center justify-center mx-auto mb-6`}
+                className={`w-16 h-16 ${service.iconBg} rounded-full flex items-center justify-center mx-auto mb-6 group-hover:animate-bounce transition-all duration-300`}
               >
-                <service.icon className="text-white" size={28} />
+                <service.icon className="text-white group-hover:scale-125 transition-transform duration-300" size={28} />
               </div>
               <h3 className="text-xl font-bold text-yellow-800 dark:text-yellow-100 font-serif mb-3">
                 {service.title}

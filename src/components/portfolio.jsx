@@ -1,5 +1,6 @@
 import React from "react";
 import { motion } from "framer-motion";
+import { FaStar, FaGem, FaHeart } from "react-icons/fa";
 
 const portfolioItems = [
   {
@@ -42,7 +43,7 @@ const portfolioItems = [
 
 export default function Portfolio() {
   return (
-    <section id="portfolio" className="py-16 lg:py-24 bg-[#f6ead0] dark:bg-[#47360e] px-8">
+    <section id="portfolio" className="py-16 lg:py-24 bg-[#f6ead0] dark:bg-[#47360e] px-8 relative overflow-hidden">
 
 
       <div className="max-w-7xl mx-auto">
@@ -71,19 +72,22 @@ export default function Portfolio() {
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: index * 0.1 }}
               viewport={{ once: true }}
-              className="relative overflow-hidden rounded-2xl shadow-lg group"
+              className="relative overflow-hidden rounded-2xl shadow-lg group border-2 border-yellow-100 hover:border-yellow-400 transition-all duration-300"
             >
               <img
                 src={item.image}
                 alt={item.title}
                 className="w-full h-64 object-cover transition-transform duration-300 group-hover:scale-105"
               />
-              <div className="absolute inset-0 bg-black/50 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
+              <div className="absolute inset-0 bg-black/50 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col items-center justify-center gap-2">
+                <FaGem className="text-yellow-400 text-2xl animate-pulse mb-2" />
                 <div className="text-center text-white px-4">
-                  <h3 className="text-xl font-bold font-serif mb-2">
-                    {item.title}
+                  <h3 className="text-xl font-bold font-serif mb-2 flex items-center justify-center gap-2">
+                    <FaStar className="text-yellow-300 animate-bounce" /> {item.title}
                   </h3>
-                  <p className="text-sm">{item.description}</p>
+                  <p className="text-sm flex items-center justify-center gap-1">
+                    {item.description} <FaHeart className="text-pink-400 animate-bounce" />
+                  </p>
                 </div>
               </div>
             </motion.div>

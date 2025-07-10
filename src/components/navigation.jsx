@@ -37,13 +37,13 @@ export default function Navigation() {
   };
 
   return (
-    <nav className="fixed top-0 left-0 right-0 z-50 bg-white/95 dark:bg-[#181a1b] backdrop-blur-md shadow-lg px-4">
+    <nav className="fixed top-0 left-0 right-0 z-50 bg-white/70 dark:bg-[#181a1b]/80 backdrop-blur-xl shadow-2xl border-b border-yellow-100 dark:border-yellow-900 px-4 transition-all duration-300">
       <div className="max-w-7xl mx-auto">
         <div className="flex items-center justify-between h-16">
           {/* Logo */}
           <div className="flex items-center">
-            <div className="text-2xl font-serif font-bold text-yellow-700 dark:text-yellow-400">
-              Fev
+            <div className="text-2xl font-serif font-bold text-yellow-700 dark:text-yellow-400 transition-transform duration-300 hover:scale-110 cursor-pointer">
+              <span className="inline-block animate-pulse">Fev</span>
               <span className="text-sm font-sans font-normal text-yellow-600 dark:text-yellow-300 block -mt-1">
                 EVENT DECOR
               </span>
