@@ -226,7 +226,7 @@ export default function Hero() {
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ duration: 1, delay: 2 }}
-        className="absolute bottom-4 left-1/2 transform -translate-x-1/2 z-20 text-white/60"
+        className="pointer-events-none absolute bottom-4 left-1/2 transform -translate-x-1/2 z-20 text-white/60"
       >
         <div className="flex flex-col items-center animate-bounce">
           <div className="w-px h-8 bg-gradient-to-b from-transparent to-white/60 mb-2"></div>
