@@ -56,9 +56,9 @@ export default function Navigation() {
 
   return (
     <motion.nav
-      initial={{ y: -100 }}
+      // initial={{ y: -100 }}
       animate={{ y: 0 }}
-      transition={{ duration: 0.8, ease: "easeOut" }}
+      // transition={{ duration: 0.8, ease: "easeOut" }}
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${
         isScrolled
           ? "bg-white/95 dark:bg-gray-900/95 backdrop-blur-xl shadow-2xl border-b border-yellow-200/50 dark:border-yellow-800/50"
@@ -75,20 +75,14 @@ export default function Navigation() {
             className="flex items-center cursor-pointer group"
             onClick={() => scrollToSection("home")}
           >
-            <div className="relative">
-              <div className="text-2xl font-serif font-bold text-transparent bg-gradient-to-r from-yellow-600 via-yellow-500 to-yellow-700 bg-clip-text transition-all duration-300 group-hover:scale-110">
-                <span className="inline-block">Fev</span>
-                <motion.div
-                  initial={{ width: 0 }}
-                  animate={{ width: "100%" }}
-                  transition={{ duration: 1, delay: 0.8 }}
-                  className="h-0.5 bg-gradient-to-r from-yellow-400 to-yellow-600 absolute bottom-0 left-0"
-                />
-              </div>
-              <div className="text-xs font-sans font-medium text-yellow-600 dark:text-yellow-400 tracking-widest uppercase opacity-80 mt-0.5">
+            <div className="flex items-center">
+            <div className="text-2xl font-serif font-bold text-yellow-700 dark:text-yellow-400 transition-transform duration-300 hover:scale-110 cursor-pointer">
+              <span className="inline-block animate-pulse">Fev</span>
+              <span className="text-sm font-sans font-normal text-yellow-600 dark:text-yellow-300 block -mt-1">
                 EVENT DECOR
-              </div>
+              </span>
             </div>
+          </div>
           </motion.div>
 
           {/* Desktop Navigation */}
@@ -96,7 +90,7 @@ export default function Navigation() {
             {navItems.map((item, index) => (
               <motion.button
                 key={item.id}
-                initial={{ opacity: 0, y: -20 }}
+                initial={{ opacity: 0, y: -10 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5, delay: 0.3 + index * 0.1 }}
                 onClick={() => scrollToSection(item.id)}
